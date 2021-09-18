@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;500;600;700;800&display=swap');
+:root {
+    --dark-blue: rgb(29, 30, 53);
+    --soft-red: rgb(244, 124, 87);
+    font-size: 16px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#e570e7+0,c85ec7+47,a849a3+100;Pink+3D+%233 */
+    background-color: #9921e8;
+    background-size: cover;
+}
+
+button {
+    background: transparent;
+    border: none;
+}
+
+i {
+    color: var(--soft-red);
+}
+
+@media (min-width: 280px) {
+    .container {
+        width: 95%;
+        min-height: 125vh;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    /* COMPLETE ACCORDIAN */
+    /* SVG */
+    .svg-container {
+        position: relative;
+        width: 100%;
+    }
+    .svg-woman {
+        background: url("../images/illustration-woman-online-mobile.svg") no-repeat;
+        width: 280px;
+        height: 250px;
+        position: absolute;
+        top: -100px;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+    }
+    .svg-shadow {
+        background: url("../images/bg-pattern-mobile.svg") no-repeat;
+        width: 280px;
+        height: 250px;
+        position: absolute;
+        bottom: -260px;
+        margin-left: auto;
+        margin-right: auto;
+        left: 50px;
+        right: 0;
+    }
+    /* RESTO */
+    .accordion {
+        background: white;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        position: relative;
+        top: 35px;
+    }
+    .sign-and-list {
+        display: flex;
+        flex-direction: column;
+    }
+    .accordion-list {
+        flex-basis: 65%;
+        height: 50%;
+        display: block;
+        padding: 10px;
+    }
+    .faq-sign {
+        height: 150px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        font-size: 1.5rem;
+    }
+    .accordion-item {
+        display: block;
+        height: 20px;
+        padding: 20px;
+        overflow: hidden;
+        transition: 0.2s all;
+    }
+    .accordion-item:last-of-type {
+        height: 20px;
+    }
+    .accordion-item.active {
+        min-height: 220px;
+    }
+    .accordion-item .question i.fas.fa-chevron-up {
+        display: none;
+    }
+    .accordion-item.active .question i.fas.fa-chevron-up {
+        display: inline-block;
+    }
+    .accordion-item .question i.fas.fa-chevron-down {
+        display: inline-block;
+    }
+    .accordion-item.active .question i.fas.fa-chevron-down {
+        display: none;
+    }
+    .question {
+        font-weight: 300;
+        border-bottom: 1px solid hsl(240, 5%, 91%);
+        margin-bottom: 15px;
+    }
+    .accordion-item.active .question {
+        font-weight: bold;
+    }
+    .accordion-item.active .answer {
+        font-weight: 00;
+        color: gray;
+        font-style: italic;
+    }
+    .question button {
+        float: right;
+        cursor: pointer;
+    }
+}
+
+@media (min-width: 300px) and (min-height: 1024px) and (max-height: 1366px) {
+    .container {
+        min-height: 100vh;
+    }
+    .accordion {
+        min-height: 60vh;
+    }
+}
+
+@media (min-width: 1440px) {
+    .container {
+        width: 80%;
+        min-height: 100vh;
+    }
+    .accordion {
+        top: 0;
+        flex-direction: row;
+        overflow: hidden;
+        min-height: 57vh;
+    }
+    .svg-container {
+        position: relative;
+        width: 100%;
+        z-index: 1;
+    }
+    .svg-box {
+        background: url("../images/illustration-box-desktop.svg") no-repeat;
+        width: 350px;
+        height: 150px;
+        position: relative;
+        left: 5%;
+        top: 10px;
+        z-index: 3;
+    }
+    .svg-woman {
+        background: url("../images/illustration-woman-online-desktop.svg") no-repeat;
+        width: 480px;
+        height: 450px;
+        position: absolute;
+        top: 10%;
+        left: -40%;
+        z-index: 2;
+    }
+    .svg-shadow {
+        background: url("../images/bg-pattern-desktop.svg") no-repeat;
+        width: 980px;
+        height: 950px;
+        position: absolute;
+        bottom: -30%;
+        left: -150%;
+        transform: scale(0.7);
+    }
+    .faq-sign {
+        height: 50px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-start;
+        font-size: 1.2rem;
+        padding: 20px 0 10px 30px;
+    }
+    .accordion-list {
+        display: block;
+        padding: 10px;
+    }
+    .accordion-item.active {
+        min-height: 150px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .svg-box {
+        left: 8%;
+    }
+    .svg-woman {
+        left: -42%;
+    }
+    .svg-shadow {
+        left: -120%;
+    }
+}
+
+@media (min-width: 1920px) {
+    .svg-box {
+        left: 9%;
+    }
+    .svg-woman {
+        left: -55%;
+    }
+    .svg-shadow {
+        left: -80%;
+    }
+}
+
+@media (min-width: 2300px) {
+    .svg-box {
+        left: 11%;
+    }
+    .svg-woman {
+        left: -60%;
+    }
+    .svg-shadow {
+        left: -90%;
+    }
+}
+
+/* 1920
+left: 6%;
+top: 20px; */
