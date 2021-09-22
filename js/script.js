@@ -7,6 +7,7 @@ buttons.forEach((button) => {
       this.parentElement.parentElement.classList.remove("active");
       return;
     }
+    accordions.forEach((accord) => accord.classList.remove("active"));
     this.parentElement.parentElement.classList.add("active");
   });
 });
