@@ -29,7 +29,6 @@ i {
 @media (min-width: 280px) {
     .container {
         width: 95%;
-        min-height: 125vh;
         margin: 0 auto;
         display: flex;
         align-items: center;
@@ -95,13 +94,13 @@ i {
         height: 20px;
         padding: 20px;
         overflow: hidden;
-        transition: 0.2s all;
+        transition: height 0.1s;
     }
     .accordion-item:last-of-type {
         height: 20px;
     }
     .accordion-item.active {
-        min-height: 220px;
+        height: 160px;
     }
     .accordion-item .question i.fas.fa-chevron-up {
         display: none;
@@ -147,12 +146,13 @@ i {
     .container {
         width: 80%;
         min-height: 100vh;
+        justify-content: flex-start;
     }
     .accordion {
-        top: 0;
         flex-direction: row;
         overflow: hidden;
-        min-height: 57vh;
+        height: 57vh;
+        width: 70%;
     }
     .svg-container {
         position: relative;
@@ -164,7 +164,7 @@ i {
         width: 350px;
         height: 150px;
         position: relative;
-        left: 5%;
+        left: 15%;
         top: 10px;
         z-index: 3;
     }
@@ -186,6 +186,10 @@ i {
         left: -150%;
         transform: scale(0.7);
     }
+    .sign-and-list {
+        flex-basis: 90%;
+        padding-top: 20px;
+    }
     .faq-sign {
         height: 50px;
         display: flex;
@@ -203,24 +207,33 @@ i {
     }
 }
 
+/* FOR EASIER CONTROLLER OF POSITIONs ELEMENTS; maybe not the most readable solution */
+
 @media (min-width: 1440px) {
     .svg-box {
-        left: 8%;
+        left: 21%;
+        top: 40px;
     }
     .svg-woman {
         left: -42%;
     }
     .svg-shadow {
-        left: -120%;
+        left: -100%;
+    }
+}
+
+@media (min-width: 1620px) {
+    .svg-box {
+        left: 20%;
     }
 }
 
 @media (min-width: 1920px) {
     .svg-box {
-        left: 9%;
+        left: 16%;
     }
     .svg-woman {
-        left: -55%;
+        left: -45%;
     }
     .svg-shadow {
         left: -80%;
@@ -229,7 +242,7 @@ i {
 
 @media (min-width: 2300px) {
     .svg-box {
-        left: 11%;
+        left: 13%;
     }
     .svg-woman {
         left: -60%;
@@ -238,7 +251,3 @@ i {
         left: -90%;
     }
 }
-
-/* 1920
-left: 6%;
-top: 20px; */
